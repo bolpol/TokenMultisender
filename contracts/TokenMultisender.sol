@@ -94,7 +94,7 @@ contract TokenMultisender is Context {
 
 		for (uint256 i; i < _accounts.length; ) {
 			if (_accounts[i] == address(0)) revert ZeroAddressSending(i);
-			if (_amounts[i] == uint256(0)) revert ZeroAddressSending(i);
+			if (_amounts[i] == uint256(0)) revert ZeroAmountSending(i);
 
 			unchecked {
 				++i;
